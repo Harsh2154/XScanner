@@ -1,6 +1,9 @@
 # XScanner
 This Python script is designed to detect Cross-Site Scripting (XSS) vulnerabilities in web applications by injecting common XSS payloads into form input fields. It identifies potential XSS vulnerabilities by checking responses for embedded scripts and event handlers.
 
+## Disclaimer
+This tool is intended for educational and testing purposes only. It is not intended to be used for unethical or illegal activities. Use at your own risk.
+
 ## Features
 Automatic Form Detection: The script scans the target webpage for forms and extracts all input fields, including <input> and <textarea>.
 
