@@ -29,7 +29,7 @@ Install the required libraries by running the following command:
 
 $ pip install requests beautifulsoup4
 
-3. Prepare Payloads:
+2. Prepare Payloads:
 create a file (payloads.txt) containing XSS payloads, with one payload per line. Example payloads:
 <script>alert('XSS')</script>
 <img src=x onerror=alert('XSS')>
@@ -39,8 +39,17 @@ Execute the script by running:
 
 $ python xss_scanner.py
 
-5. View Results:
+4. View Results:
 The script will output the total input fields found, their names, and any potential XSS vulnerabilities detected.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Author
+
+Harsh Sandigada - @Harsh2154
+
 
 ## Contributing
 Feel free to submit issues, fork the repo, and send pull requests if you'd like to improve the script!
