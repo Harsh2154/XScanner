@@ -6,11 +6,13 @@ import time
 # Function to display a banner
 def show_banner():
     banner = """
+    \033[38;5;3m
     ======================================
 
        XSS Vulnerability Advance Scanner
 
     ======================================
+    \033[0m
     """
     print(banner)
 
@@ -82,7 +84,7 @@ def check_xss(url, payload, form):
         # Check if the response contains potential XSS indicators
         if re.search(r'<script.*?>.*?</script>', response.text, re.IGNORECASE) or \
            re.search(r'on\w+\s*=\s*["\']*.*?["\']*', response.text, re.IGNORECASE):
-            print(f"Potential XSS vulnerability found in input field '{field}' with payload: {payload}")
+            print(f"\033[91m[CRITICAL] Potential XSS vulnerability found in input field '{field}' with payload: {payload}\033[0m")
         else:
             print(f"No XSS vulnerability detected in input field '{field}' with payload: {payload}")
 
