@@ -30,7 +30,7 @@ A report indicating whether a vulnerability was found for each payload on specif
 1. Install Dependencies:
 Install the required libraries by running the following command:
 
-$ pip install requests beautifulsoup4
+$  pip install requests beautifulsoup4
 
 2. Prepare Payloads:
 create a file (payloads.txt) containing XSS payloads, with one payload per line. Example payloads:
@@ -40,7 +40,7 @@ create a file (payloads.txt) containing XSS payloads, with one payload per line.
 3. Run the Script:
 Execute the script by running:
 
-$ python xss_scanner.py
+$  python xss_scanner.py
 
 4. View Results:
 The script will output the total input fields found, their names, and any potential XSS vulnerabilities detected.
