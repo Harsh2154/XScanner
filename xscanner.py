@@ -61,9 +61,12 @@ def get_form_fields(url):
         print("Input fields detected: ", ', '.join(input_field_names))
     return form_details
 
+from urllib.parse import urljoin
+
 # Function to check for XSS and track vulnerable input fields
 def check_xss(url, payload, form):
-    form_action = form['action'] if form['action'] else url  # If no action, post to the same URL
+    # Construct full URL for form action
+    form_action = urljoin(url, form['action']) if form['action'] else url
     form_method = form['method']
     
     # Set payloads for all detected input fields
@@ -71,7 +74,7 @@ def check_xss(url, payload, form):
     for field in data:
         # Set the payload for each input field
         data[field] = payload
-    
+        
         # Make the appropriate request
         if form_method == 'post':
             response = requests.post(form_action, data=data)
@@ -87,6 +90,7 @@ def check_xss(url, payload, form):
             print(f"\033[91m[CRITICAL] Potential XSS vulnerability found in input field '{field}' with payload: {payload}\033[0m")
         else:
             print(f"No XSS vulnerability detected in input field '{field}' with payload: {payload}")
+
 
 # Function to load payloads from a file
 def load_payloads_from_file(file_path):
