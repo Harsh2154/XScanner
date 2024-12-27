@@ -34,9 +34,10 @@ $  pip install requests beautifulsoup4
 ```
 2. Prepare Payloads:
 create a file (payloads.txt) containing XSS payloads, with one payload per line. Example payloads:
+```bash
 <script>alert('XSS')</script>
 <img src=x onerror=alert('XSS')>
-
+```
 3. Run the Script:
 Execute the script by running:
 ```bash
